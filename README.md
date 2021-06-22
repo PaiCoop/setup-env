@@ -1,6 +1,6 @@
 # setup-env
 Automatized run-time environment setup script for PaiCoop.
-> Only tested on `CentOS7.9.2009`!!
+> Only tested on `华为云 鲲鹏kc1.large.2 aarch64 CentOS7.9.2009`!!
 
 ## Usage
 Run `$ bash <(curl -s https://raw.githubusercontent.com/PaiCoop/setup-env/main/setup.sh)` to launch the script.
