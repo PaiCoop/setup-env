@@ -60,7 +60,14 @@ yum -y update
 yum install epel-release -y
 #
 # install development tools
-yum install -y wget git vim unzip zip openssl make gcc gcc-c++ screen fuse fuse-devel rsync
+yum install -y wget git vim unzip zip openssl make gcc gcc-c++ screen fuse fuse-devel nscd
+#
+# prevent DNS cache pollution
+systemctl start nscd
+systemctl enable nscd
+nscd -i hosts
+echo '52.74.223.119     github.com'>>/etc/hosts
+echo '199.232.96.133    raw.githubusercontent.com'>>/etc/hosts
 #############################
 #  Setup Docker Env       
 #############################
